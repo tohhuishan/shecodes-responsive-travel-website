@@ -59,6 +59,55 @@ header a:hover {
   color: rgb(255, 255, 255);
 }
 
+main {
+  margin: 0;
+}
+
+main section {
+  padding: 50px;
+}
+
+main h2 {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main section.section-1,
+main section.section-3 {
+  background: rgb(255, 255, 255);
+}
+
+main section.section-2 {
+  background-color: rgb(48, 48, 50);
+}
+
+.main-grid-1 {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  padding: 50px 100px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-grid-1 div {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-grid-1 img {
+  max-width: 450px;
+}
+
+.main-grid-1 p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 footer {
   background-image: linear-gradient(rgba(0, 12, 52, 0.8), rgba(0, 12, 52, 0.8)),
     url("../media/food.jpg");
@@ -100,6 +149,13 @@ div.footer-grid div {
   margin: 0 14px;
 }
 
+@media (max-width: 1250px) {
+  .main-grid-1 {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 48px;
@@ -115,8 +171,17 @@ div.footer-grid div {
 
   header h3,
   header a,
+  p,
   footer {
     font-size: 14px;
+  }
+
+  main h2 {
+    font-size: 28px;
+  }
+
+  .main-grid-1 {
+    padding: 20px 50px;
   }
 
   footer {
@@ -125,5 +190,33 @@ div.footer-grid div {
 
   div.footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  main section {
+    padding: 20px;
+  }
+
+  .main-grid-1 {
+    grid-row-gap: 20px;
+  }
+
+  .main-grid-1 img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  .main-grid-1 {
+    padding: 0;
+  }
+
+  .main-grid-1 h3 {
+    text-align: center;
+  }
+
+  .main-grid-1 p {
+    display: none;
   }
 }
