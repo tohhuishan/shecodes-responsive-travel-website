@@ -1,3 +1,79 @@
-p {
-  color: red;
+body {
+  background-color: rgb(35, 78, 142);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../media/lau-pa-sat.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header h3 {
+  letter-spacing: 5px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header a {
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 50px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+header a:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  header {
+    padding: 50px 20px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3,
+  header a {
+    font-size: 14px;
+  }
 }
