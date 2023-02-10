@@ -59,6 +59,47 @@ header a:hover {
   color: rgb(255, 255, 255);
 }
 
+footer {
+  background-image: linear-gradient(rgba(0, 12, 52, 0.8), rgba(0, 12, 52, 0.8)),
+    url("../media/food.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding: 80px 100px;
+}
+
+footer h3 {
+  font-weight: 900;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer ul,
+footer p {
+  line-height: 1.5;
+}
+
+footer a {
+  color: white;
+}
+
+div.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+div.footer-grid div {
+  margin: 0 14px;
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 48px;
@@ -73,7 +114,16 @@ header a:hover {
   }
 
   header h3,
-  header a {
+  header a,
+  footer {
     font-size: 14px;
+  }
+
+  footer {
+    padding: 50px;
+  }
+
+  div.footer-grid {
+    grid-template-columns: 1fr;
   }
 }
