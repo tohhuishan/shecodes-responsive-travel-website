@@ -16,6 +16,26 @@ h1 {
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+}
+
+.line-height-one-and-a-half {
+  line-height: 1.5;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+.standard-font-size {
+  font-size: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../media/lau-pa-sat.jpg");
@@ -24,22 +44,16 @@ header {
   background-size: cover;
   color: rgb(255, 255, 255);
   padding: 100px 20px;
-  text-align: center;
 }
 
 header h2 {
   font-size: 28px;
   font-weight: 500;
-  line-height: 1.5;
-  margin: 0;
 }
 
 header h3 {
   letter-spacing: 5px;
-  font-size: 16px;
   font-weight: 800;
-  line-height: 1.5;
-  margin: 0;
 }
 
 header a {
@@ -47,7 +61,6 @@ header a {
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.8);
   display: inline-block;
-  font-size: 16px;
   margin-top: 50px;
   padding: 10px 15px;
   text-decoration: none;
@@ -59,21 +72,15 @@ header a:hover {
   color: rgb(255, 255, 255);
 }
 
-main {
-  margin: 0;
-}
-
-main section {
-  padding: 50px;
-}
-
 main section.section-1,
 main section.section-3 {
   background: rgb(255, 255, 255);
+  padding: 50px;
 }
 
 main section.section-2 {
   background-color: rgb(0, 0, 65);
+  padding: 50px 20px;
 }
 
 main section.section-1 h2,
@@ -82,7 +89,6 @@ main section.section-3 h2 {
   font-size: 36px;
   font-weight: 900;
   letter-spacing: 10px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -91,7 +97,6 @@ main section.section-2 h2 {
   font-size: 36px;
   font-weight: 900;
   letter-spacing: 10px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -107,11 +112,17 @@ main section.section-2 h3.sub-heading {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
-  text-align: center;
+}
+
+main img.peranakan-shophouses {
+  filter: brightness(120%) contrast(130%) saturate(130%);
+}
+
+main img.haw-par-villa {
+  filter: brightness(130%) contrast(130%) saturate(150%);
 }
 
 .main-grid-2-columns {
-  display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 50px;
   padding: 50px 100px;
@@ -129,12 +140,10 @@ main section.section-2 h3.sub-heading {
 
 .main-grid-2-columns p {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 16px;
-  line-height: 1.5;
 }
 
-.main-grid-3-columns {
-  display: grid;
+.main-grid-3-columns,
+.main-grid-3-columns-for-videos {
   grid-column-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 50px 100px;
@@ -148,14 +157,13 @@ main section.section-2 h3.sub-heading {
 }
 
 .card .sub-grid-2-columns {
-  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .sub-grid-2-columns .sub-grid-content iframe,
 .sub-grid-2-columns .sub-grid-content img {
   aspect-ratio: 4/3;
-  max-width: 100%;
+  width: 100%;
 }
 
 .card h3,
@@ -174,7 +182,22 @@ main section.section-2 h3.sub-heading {
 
 .card p {
   color: rgba(0, 0, 0, 0.8);
-  font-size: 16px;
+}
+
+.card a {
+  background: rgb(35, 78, 142);
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-top: 30px;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.main-grid-3-columns-for-videos iframe.video {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 footer {
@@ -184,7 +207,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(255, 255, 255);
-  font-size: 16px;
   padding: 80px 100px;
 }
 
@@ -198,11 +220,6 @@ footer ul {
 
 footer li {
   list-style: none;
-}
-
-footer ul,
-footer p {
-  line-height: 1.5;
 }
 
 footer a {
@@ -250,10 +267,7 @@ div.footer-grid div {
     font-size: 20px;
   }
 
-  header h3,
-  header a,
-  p,
-  footer {
+  .standard-font-size {
     font-size: 14px;
   }
 
@@ -267,6 +281,13 @@ div.footer-grid div {
 
   .main-grid-2-columns p {
     margin-bottom: 0;
+  }
+
+  .main-grid-3-columns-for-videos {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 30px;
+    margin: 0 auto;
   }
 
   footer {
