@@ -83,34 +83,36 @@ main section.section-2 {
   padding: 50px 20px;
 }
 
-main section.section-1 h2,
-main section.section-3 h2 {
-  color: rgba(0, 0, 0, 0.7);
+main section h2 {
   font-size: 36px;
   font-weight: 900;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
 
+main section.section-1 h2,
+main section.section-3 h2 {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 main section.section-2 h2 {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: 10px;
-  text-transform: uppercase;
+}
+
+main section.section-1 h3,
+main section.section-3 h3,
+main section.section-2 h3.sub-heading {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 main section.section-1 h3,
 main section.section-3 h3 {
   color: rgb(0, 0, 0);
-  font-size: 18px;
-  font-weight: 700;
 }
 
 main section.section-2 h3.sub-heading {
   color: rgba(255, 255, 255, 0.95);
-  font-size: 18px;
-  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -227,7 +229,6 @@ footer a {
 }
 
 div.footer-grid {
-  display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 }
 
@@ -273,6 +274,8 @@ div.footer-grid div {
 
   main h2 {
     font-size: 28px;
+    letter-spacing: 5px;
+    margin-top: 0;
   }
 
   .main-grid-2-columns {
@@ -283,11 +286,16 @@ div.footer-grid div {
     margin-bottom: 0;
   }
 
+  .main-grid-3-columns {
+    padding: 10px;
+  }
+
   .main-grid-3-columns-for-videos {
     grid-template-columns: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 30px;
     margin: 0 auto;
+    padding: 0;
   }
 
   footer {
@@ -306,22 +314,22 @@ div.footer-grid div {
 }
 
 @media (max-width: 600px) {
-  main section {
-    padding: 20px;
+  main section.section-1,
+  main section.section-2 {
+    padding: 50px 20px;
+  }
+
+  main section.section-3 {
+    padding: 50px 10px;
   }
 
   .main-grid-2-columns {
     grid-row-gap: 20px;
+    padding: 10px;
   }
 
   .main-grid-2-columns img {
     max-width: 300px;
-  }
-}
-
-@media (max-width: 440px) {
-  .main-grid-2-columns {
-    padding: 0;
   }
 
   .main-grid-2-columns h3 {
@@ -331,5 +339,49 @@ div.footer-grid div {
 
   .main-grid-2-columns p {
     display: none;
+  }
+
+  .card .sub-grid-2-columns {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  main section.section-1,
+  main section.section-2 {
+    padding: 20px 14px;
+  }
+
+  main section.section-3 {
+    padding: 20px 8px;
+  }
+
+  main h2 {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  .main-grid-2-columns {
+    padding: 0;
+  }
+
+  .main-grid-2-columns img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 340px) {
+  .main-grid-2-columns img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 300px) {
+  .main-grid-2-columns img {
+    max-width: 160px;
   }
 }
